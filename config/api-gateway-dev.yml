@@ -23,12 +23,12 @@ spring:
             - StripPrefix=1
         # 销雄-登记单接口
         - id: host_route5
-          uri: http://132.126.156.86:51006
+          uri: http://127.0.0.1:9081/
           predicates:
-            - Path=/gzgx1_wx_05/**
+            - Path=/gzgx1_wx_05/**,/gzgx1_wx_04/**
         # 小助手接口
         - id: host_route6
-          uri: http://132.126.156.86:51006/
+          uri: http://127.0.0.1:9091/
           predicates:
             - Path=/SelDbCJZS/**
         # 广东数据集市接口
@@ -53,11 +53,11 @@ spring:
             - Path=/emp-pro/**
         # 弱密码接口
         - id: host_route11
-          uri: http://127.0.0.1:9081/
+          uri: http://172.53.49.17:8088/
           predicates:
             - Path=/Verification/**
-        # 销雄-登记单接口
+        # 登记单历史单，当前单接口
         - id: host_route12
-          uri: http://132.126.156.86:51006
+          uri: http://127.0.0.1:9081/
           predicates:
-            - Path=/gzgx1_wx_04/**
+            - Path=/gxtx_03/**,/gxtx_04/**
